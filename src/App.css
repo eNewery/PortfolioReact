@@ -1,3 +1,86 @@
+/* KEYFRAMES */
+@keyframes appear-l {
+  0%{transform: translateX(20em); opacity: 0;}
+  60%{opacity: 0;}
+}
+
+@keyframes burble {
+  0%{transform: translateY(-2em);}
+  50%{}
+  100%{transform: translateY(-2em);}
+}
+
+@keyframes gradient {
+  0%{}
+  100%{
+    transform: translateY(-60em)
+  }
+}
+@keyframes gradient-about {
+  0%{ }
+  100%{
+    transform: translateY(-30em) scale(0); opacity: 0;
+  }
+}
+
+@keyframes appear {
+  /* 0%{transform:translateY(-50em);} */
+  0%{filter: blur(1em);opacity: 0; transform: scale(0.1) rotate3d(0, 1, 0, 180deg); }
+  50%{filter: blur(2em); transform: scale(0.9);}
+  100%{opacity: 1; transform: scale(1)}
+}
+
+@keyframes move {
+  0%{}
+
+  50% {
+    transform:rotateY(180deg); opacity: 1;
+  }
+  100%{transform: rotate3d(0, 1, 0, 60deg) translateY(-10em) scale(0.6);opacity: 0;}
+}
+@keyframes rotate {
+  0%{transform: rotateZ(0);}
+
+100%{transform: rotateZ(360deg);}
+
+}
+/* KEYFRAMES */
+
+/* KEYFRAME CLASS */
+
+.burble{
+  animation-name: burble;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+.appear{
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+.gradient{
+  animation-name: gradient;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+.gradient-about{
+  animation-name: gradient-about;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.rotate{
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* KEYFRAME CLASS */
+
+
+/* RESET CSS */
+
 #root{
   height: 100vh;
   width: 100%;
@@ -7,6 +90,11 @@
   height: 100%;
 }
 
+/* RESET CSS */
+
+
+/* START CONTAINER */
+
 .start-container{
   height: 100%;
   width: 100%;
@@ -15,7 +103,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 36px;
+  font-size: 32px;
   color:white;
   transition:1s ease-in-out;
 }
@@ -29,26 +117,139 @@
   animation-iteration-count: infinite;
   transition: 1s;
 }
-@keyframes burble {
-  0%{transform: translateY(-2em);}
-  50%{}
-  100%{transform: translateY(-2em);}
-}
-.gradient{
-  animation-name: gradient;
-  animation-duration: 2s;
-  animation-fill-mode: both;
-}
-@keyframes gradient {
-  0%{}
-  100%{
-    transform: translateY(-30em)
-  }
-}
+
 .start-container h3{
   font-weight: 200;
 }
-.start-container .start-image{
+.start-image{
+  width: 186px;
+  height: 186px;
+  border-radius: 50%;
+  border: 5px solid white;
+  background-image: url(./assets/images/start.jpg);
+  background-position: center;
+  background-size: cover;
+  transition:all 2s;
+}
+.start-image:hover{
+  transform: rotateZ(360deg);
+  transition: all 2s;
+}
+.start-container .start-btn{
+  font-size: 24px;
+  background: none;
+  color: white;
+  border: none;
+  font-weight: 400;
+  cursor: pointer;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+box-shadow: inset 0px 0 0 0 rgba(0,212,255,1);
+border-radius: 0.3em;
+padding: 0.4em;
+transition:1s;
+}
+.start-btn:hover{
+  box-shadow: inset 300px 0 0 0 rgb(0, 62, 75);
+transition:1s;
+transform: scale(1.2);
+}
+.rrss{
+  display: flex;
+  gap: 1em;
+  transform: translateY(1em);
+}
+.linkedin{
+background: url(./assets/images/linkedin.png);
+background-repeat: no-repeat;
+background-position: center;
+width:64px;
+height:64px;
+transition: 1s transform;
+transform: scale(0.8);
+}
+.linkedin:hover{
+  transform: scale(1);
+  transition: 1s;
+}
+.ghub{
+background: url(./assets/images/ghub.png);
+background-repeat: no-repeat;
+background-position: center;
+width:64px;
+height:64px;
+transition: 1s transform;  
+transform: scale(0.8);
+}
+.ghub:hover{
+  transform: scale(1);
+  transition: 1s;
+}
+/* START CONTAINER */
+
+/* HOME */
+
+.home{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100.1vh;
+  flex-direction: column;
+  background-color: rgba(0,212,255,1);
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.navs{
+  width: 100%;
+}
+
+.nav-media{
+  display: none;
+  color:white;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-links{
+margin: 1em;
+display: flex;
+gap: 2em;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+.nav-cv{
+  margin: 2em;
+}
+
+.nav-cv a{
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+.home-total-container{
+  display: flex;
+  justify-content: start;
+  width: 100%;
+}
+
+.home-container{
+  display: flex;
+  justify-content: start;
+  gap: 3em;
+  transform: translateX(5em);
+}
+
+.home-image{
   width: 286px;
   height: 286px;
   border-radius: 50%;
@@ -56,12 +257,113 @@
   background-image: url(./assets/images/start.jpg);
   background-position: center;
   background-size: cover;
+  transition:all 2s;
 }
-.start-container button{
+
+.home-image:hover{
+  transform: rotateZ(360deg);
+  transition: all 2s;
+}
+
+.home-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color:white;
+  font-size: 42px;
+}
+
+.home-text h3{
+  font-weight: 200;
+margin: 0;
+}
+
+.home-btn{
+background:none;
+border: none;
+box-shadow:inset -1px -1px 2px 2px rgb(237, 236, 255);
+font-size: 16px;
+color: white;
+padding: 0.5em;
+font-size: 1em;
+font-weight: 100;
+transition: 1s;
+border-radius: 0.4em;
+cursor: pointer;
+}
+.home-btn:hover{
+  transition: 1s;
+  box-shadow:inset 500px -1px 2px 2px rgb(237, 236, 255);
+color: rgba(0,212,255,1);
+}
+
+.swipe{
+color: white;
+padding: 1em;
+font-weight: 100;
+font-size: 32px;
+}
+
+/* HOME */
+
+
+/* ABOUT */
+/* ABOUT */
+
+
+/* MEDIA QUERIES */
+
+
+@media (max-width:768px) {
+  h3{
+font-size: 24px;
+  }
+.home-image{
+  width: 100px;
+  height: 100px;
+}
+.home-total-container{
+  align-items: center;
+  justify-content: center;
+}
+.home-container{
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(0);
+}
+.home-text{
+  height: 40%;
   font-size: 24px;
-  background: none;
-  color: white;
-  border: none;
-  font-weight: 100;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  align-items: center;
+  justify-content: start;
+}
+.home-text h3{
+  margin:0.5em;
+}
+.nav{
+  display: none;
+}
+/* NAV MEDIA */
+
+
+.nav-media{
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  transform: translateX(-1em) translateY(1em);
+}
+.nav-icon{
+  background: url(./assets/images/burger.png);
+  height: 48px;
+  width: 48px;
+  transform: scale(0.5);
+}
+/* NAV MEDIA */
+
+
+.swipe{
+  font-size: 20px;
+}
+  /* MEDIA QUERIES */
+
 }

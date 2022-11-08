@@ -8,7 +8,7 @@ setTimeout(() => {
    navigate("/Home") 
 }, 3000);
     return (
-    <div class="center appear">
+    <div class="center">
     <div id = "cloud"></div>
   </div>
   )

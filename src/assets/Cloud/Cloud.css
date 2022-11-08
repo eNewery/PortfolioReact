@@ -16,6 +16,7 @@
     animation-name:move;
     animation-duration: 3s;
     animation-fill-mode: both;
+    opacity: 0;
   }
   
   #cloud:after {
@@ -40,19 +41,4 @@
     right: 40px;
   }
   
-  @keyframes move {
-    0% {
-      transform: translatex(0);
-    }
-    100% {
-      transform: translateY(30em); opacity: 0;
-    }
-  }
-  .appear{
-    animation-name: appear;
-    animation-duration: 4s;
-    animation-fill-mode: both;
-  }
-  @keyframes appear {
-    0%{transform:translateY(-50em);}
-  }
+
