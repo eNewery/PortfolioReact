@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom"
 
 function Home() {
   const navigate = useNavigate();
+  
   setTimeout(() => {
     const container = document.querySelector(".home").classList.remove("appear");
   }, 1500);

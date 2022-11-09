@@ -10,21 +10,27 @@ import css from "../images/css.png"
 import redux from "../images/redux.png"
 import jquery from "../images/jquery.png"
 import figma from "../images/figma.png"
-import "./About.css"
 import Navbar from '../Navbar/Navbar'
+import "./About.css"
 
 function About() {
 
   const navigate = useNavigate();
-
-setTimeout(() => {
-  const btn = document.querySelector(".about-swipe").addEventListener("click", () => {
-    const container = document.querySelector(".home").classList.add("gradient-about");
-}, 2000);
-
+  setTimeout(() => {
+    const container = document.querySelector(".about").classList.remove("appear");
+  }, 1500);
+window.addEventListener("scroll", () => {
+  const scrolled = window.scrollY;
+if (scrolled !== 0) {
+  const container = document.querySelector(".about").classList.add("gradient");
+  setTimeout(() => {
+    navigate("/Projects")
+    container.classList.remove("appear")
+  }, 2000);
+}
 })
   return (
-    <div className='home appear about'>
+    <div className='appear about'>
       <Navbar/>
       <div className="about-sections">
 <section className='about-left'>
@@ -41,7 +47,7 @@ setTimeout(() => {
   <div className='about-image-container'><div className='about-title-image'><h3>JQUERY</h3><img src={jquery} alt="" /></div><div className='about-title-image'><h3>REDUX</h3><img src={redux} alt="" /></div></div>
   <div className='about-image-container'><div className='about-title-image'><h3>BOOTSTRAP</h3><img src={bootstrap} alt="" /></div><div className='about-title-image'><h3>TAILWIND</h3><img src={tailwind} alt="" /></div></div>
   <div className='about-image-container'><div className='about-title-image'><h3>GIT</h3><img src={git} alt="" /></div><div className='about-title-image'><h3>FIGMA</h3><img src={figma} alt="" /></div></div>
-  <button className="about-swipe swipe"> Click for More</button>
+  <div className="about-swipe">˅ Swipe for More ˅</div>
 </aside>        
       </div>
     </div>
