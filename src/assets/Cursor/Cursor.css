@@ -1,7 +1,7 @@
 
 /* CURSOR */
 
-.cursor{
+#cursor{
     position: absolute;
     width: 20px;
     height: 20px;
@@ -11,11 +11,28 @@
     border-radius: 50%;
     pointer-events: none;
     z-index: 10;
+transition: transform 1s;
   }
-  
- button:hover ~ .cursor{
-    width: 100px;
-    height: 100px;
-    border: 2px solid black;
+  .ring{
+    animation-name: ring;
+    animation-duration: 0.7s;
+    animation-fill-mode: both;
+transition: transform 1s;
   }
+@keyframes ring {
+  0%{}
+  100%{padding: 0.3em; background-color: rgb(0, 70, 81); transform: rotateZ(90deg);    box-shadow: 0 0 0 8px rgb(0, 57, 66);
+
+  }
+}
+.ring-disabled{
+  animation-name: ring-disabled;
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+transition: transform 1s;
+}
+@keyframes ring-disabled {
+  0%{padding: 0.3em; background-color: rgb(0, 70, 81); transform: rotateZ(90deg);    box-shadow: 0 0 0 8px rgb(0, 57, 66)}
+  100%{}
+}
   /* CURSOR */

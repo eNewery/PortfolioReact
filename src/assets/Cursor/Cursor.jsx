@@ -2,7 +2,7 @@ import React from 'react'
 import "./Cursor.css"
 function Cursor() {
     setTimeout(() => {
-        var cursor = document.querySelector(".cursor");
+        var cursor = document.querySelector("#cursor");
         document.addEventListener("mousemove", function(e){
             var x = e.clientX;
             var y = e.clientY;
@@ -12,7 +12,7 @@ function Cursor() {
     }, 1000);
 
   return (
-    <div className='cursor'></div>
+    <div id='cursor'></div>
   )
 }
 

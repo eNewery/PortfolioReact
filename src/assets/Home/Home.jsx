@@ -47,7 +47,18 @@ setTimeout(() => {
 <Link onClick={handleClick3}>Projects</Link>
       </div>
       <div className="nav-cv appear-l">
-        <Link className="home-btn"> 
+        <Link className="home-btn" onMouseOut={() => {
+                    let cursor = document.querySelector("#cursor")
+                    cursor.classList.remove("ring")
+                    cursor.classList.add("ring-disabled")
+                    setTimeout(() => {
+                      cursor.classList.remove("ring-disabled")
+                    }, 1000);
+        }} onMouseMove={() => {
+          let cursor = document.querySelector("#cursor")
+          cursor.classList.remove("ring-disabled")
+          cursor.classList.add("ring")
+        }}> 
          Dowloand My CV
         </Link>
       </div>
@@ -59,7 +70,16 @@ setTimeout(() => {
       <div className="home-text">
         <h3>Ulises Rodriguez</h3>
         <h3>Front-End Developer</h3>
-        <button className='home-btn'>Contact Me!</button>
+        <button className='home-btn' onMouseOut={() => {
+                    let cursor = document.querySelector("#cursor")
+                    cursor.classList.remove("ring")
+                    cursor.classList.add("ring-disabled")
+        }}
+         onMouseMove={() => {
+          let cursor = document.querySelector("#cursor")
+          cursor.classList.remove("ring-disabled")
+          cursor.classList.add("ring")
+        }}>Contact Me!</button>
       </div>
       </div>
       </div>
