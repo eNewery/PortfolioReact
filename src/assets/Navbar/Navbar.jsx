@@ -11,9 +11,9 @@ function Navbar() {
         <div className="nav">
 
       <div className="nav-links">
-<Link>Home</Link>
-<Link>About Me</Link>
-<Link>Projects</Link>
+<a href="#Home">Home</a>
+<a href="#About">About Me</a>
+<a href="#Projects">Projects</a>
       </div>
       <div className="nav-cv">
         <Link className="home-btn"> 

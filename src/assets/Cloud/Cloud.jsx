@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate  } from 'react-router-dom'
+import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
 import "./Cloud.css"
 
 function Cloud() {
@@ -9,6 +10,7 @@ setTimeout(() => {
 }, 3000);
     return (
     <div class="center">
+
     <div id = "cloud"></div>
   </div>
   )

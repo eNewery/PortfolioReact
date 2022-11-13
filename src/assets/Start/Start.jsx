@@ -1,5 +1,7 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom"
+import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
+import Cursor from '../Cursor/Cursor';
 function Start() {
   const navigate = useNavigate();
 setTimeout(() => {
@@ -15,9 +17,11 @@ setTimeout(() => {
     }, 1000);
 
 })
+
   return (
     <div className='start-container appear'>
       <div className="start-total-container">
+
         <h3>Hi, welcome to</h3>
         <div className="start-image"></div>
         <h3>my portfolio</h3>
