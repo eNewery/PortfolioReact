@@ -1,70 +1,68 @@
 import React from 'react'
-import {useRef} from 'react';
 import { Link } from "react-router-dom"
-import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
+import $ from "jquery";
 function Home() {
-  const ref1 = useRef(null);
-const ref2 = useRef(null);
-const ref3 = useRef(null);
+  var $ = require( "jquery" );
+/* const [btnState, setBtnState] = useState(true);
 
-/* KEYFRAME NAVBAR */
+const homeRight = document.querySelector(".home-right")
+const homeRightText = document.querySelector(".home-right-text")
+function btnExtend() {
+  setBtnState(btnState => !btnState)
+}
 
 setTimeout(() => {
-  const navbar = document.querySelector("#diss").classList.add("appear-nav")
-}, 2000);
-
+  const btnFunction = document.getElementById("next");
+  btnFunction.addEventListener("click", btnExtend)
+}, 1000);
+if (btnState === true) {
+  $(".home-right-text").show()
+  }
+if (btnState === false) {
+    $(".home-right-text").hide()
+  }
+let toggleClassCheck = btnState ? ' height ' : ' height- ';
+ */
 /* KEYFRAME NAVBAR */
-
-
-
-
-  const handleClick1 = () => {
-    ref1.current?.scrollIntoView({inline: "center", behavior: 'smooth'});
-  };
-  const handleClick2 = () => {
-    ref2.current?.scrollIntoView({inline: "center", behavior: 'smooth'});
-  };
-  const handleClick3 = () => {
-    ref3.current?.scrollIntoView({inline: "center", behavior: 'smooth'});
-  };
 
   return (
     <div className='all'>
 
                                         {/* SECTION 1 */}
-      <section ref={ref1} id='Home' className='home appear'>
+      <section id='Home' className='home appear'>
       <div id='diss' className="navs">
-        <div className="nav-media">
-            <div className="nav-icon"></div>
+    <div className="nav-media">
+        <div className="nav-icon"></div>
 
-        </div>
-
-        <div className="nav">
-
-      <div className="nav-links appear-r">
-<Link onClick={handleClick1}>Home</Link>
-<Link onClick={handleClick2}>About Me</Link>
-<Link onClick={handleClick3}>Projects</Link>
-      </div>
-      <div className="nav-cv appear-l">
-        <Link className="home-btn" onMouseOut={() => {
-                    let cursor = document.querySelector("#cursor")
-                    cursor.classList.remove("ring")
-                    cursor.classList.add("ring-disabled")
-                    setTimeout(() => {
-                      cursor.classList.remove("ring-disabled")
-                    }, 1000);
-        }} onMouseMove={() => {
-          let cursor = document.querySelector("#cursor")
-          cursor.classList.remove("ring-disabled")
-          cursor.classList.add("ring")
-        }}> 
-         Dowloand My CV
-        </Link>
-      </div>
     </div>
-        </div>
+
+    <div className="nav">
+
+  <div className="nav-links appear-r">
+<Link to="/Home" className='nav-link'>Inicio</Link>
+<Link to="/Projects" className='nav-link'>Proyectos</Link>
+<Link to="/About" className='nav-link'>Conóceme!</Link>
+  </div>
+  <div className="nav-cv appear-l">
+    <Link className="home-btn" onMouseOut={() => {
+                let cursor = document.querySelector("#cursor")
+                cursor.classList.remove("ring")
+                cursor.classList.add("ring-disabled")
+                setTimeout(() => {
+                  cursor.classList.remove("ring-disabled")
+                }, 1000);
+    }} onMouseMove={() => {
+      let cursor = document.querySelector("#cursor")
+      cursor.classList.remove("ring-disabled")
+      cursor.classList.add("ring")
+    }}> 
+     Dowloand My CV
+    </Link>
+  </div>
+</div>
+    </div>
       <div className="home-total-container">
+
       <div className="home-container">
       <div className="home-image"></div>
       <div className="home-text">
@@ -79,9 +77,29 @@ setTimeout(() => {
           let cursor = document.querySelector("#cursor")
           cursor.classList.remove("ring-disabled")
           cursor.classList.add("ring")
-        }}>Contact Me!</button>
+        }}>Más acerca de mi</button>
       </div>
       </div>
+{/*       <div className={`home-right ${toggleClassCheck}`}>
+      <button onMouseOut={() => {
+            let cursor = document.querySelector("#cursor")
+            cursor.classList.remove("ring")
+            cursor.classList.add("ring-disabled")
+}} onMouseMove={() => {
+  let cursor = document.querySelector("#cursor")
+  cursor.classList.remove("ring-disabled")
+  cursor.classList.add("ring")
+}} id="next" class="btn-neon">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <span id="span4"></span>
+       Extend - Close
+    </button>
+    <div class="home-right-text appear-l"><p>
+        Mi nombre es Ulises Rodriguez, tengo 21 años y comencé mi carrera como Desarrollador Front-End en principios de 2021. Complete mi carrera en Coderhouse e hice cursos de WMedia, Fazt, HolaMundo, MiDudev, entre otros. Mi objetivo es aprender y obtener la mayor cantidad de conocimientos posibles, ya sean los más actuales como los más longevos utilizados en la actualidad. En un futuro planeo estudiar Ingeniería Informática ya que me apasiona el estudio y el aprendizaje, mientras tanto busco trabajar con empresas y/o otros profesionales que tengan las mismas ganas de enseñar como las que yo tengo de aprender. Gracias por visitar mi portfolio!</p><div></div></div>
+      
+          </div> */}
       </div>
       <footer>         <a target="_blank" href="https://github.com/eNewery">
         <div className="ghubwh appear-r"></div>
@@ -89,19 +107,6 @@ setTimeout(() => {
           <div className="linkedinwh appear-l"></div>
           </a></footer>
         </section> 
-                                                {/* SECTION 1 */}
-
-
-
-
-                                                {/* SECTION 2 */}
-        <section ref={ref2} id='About' className='home'></section>
-                                                {/* SECTION 2 */}
-
-
-                                                        {/* SECTION 3 */}
-        <section ref={ref3} id='Projects' className='home'></section>
-                                                        {/* SECTION 3 */}
     </div>
   )
 }

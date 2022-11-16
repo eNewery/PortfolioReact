@@ -88,3 +88,26 @@ transform: translateY(-10em);
     0%{}
     100%{transform: translateY(100vh); background-color: black;}
 }
+.burble-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.burble{
+    font-size: 32px;
+    color:rgb(0, 0, 0);
+    animation:burble 5s infinite both;
+    background-color: white;
+    height: 200px;
+    transition: all;
+    width: 280px;
+    height: 240px;
+}
+@keyframes burble {
+    0%{border-bottom-left-radius:44%; border-bottom-right-radius:18%; border-top-left-radius:35%; border-top-right-radius:42%;}
+    25%{border-bottom-left-radius:42%; border-bottom-right-radius:15%; border-top-left-radius:43%; border-top-right-radius:21%;}
+    50%{border-bottom-left-radius:22%; border-bottom-right-radius:43%; border-top-left-radius:19%; border-top-right-radius:36%;}
+    100%{border-bottom-left-radius:44%; border-bottom-right-radius:18%; border-top-left-radius:35%; border-top-right-radius:42%;}
+
+}

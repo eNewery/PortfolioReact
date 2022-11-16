@@ -1,38 +1,40 @@
 
 /* CURSOR */
+@media (min-width:768px) {
+  #cursor{
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #ffffff;
+      box-sizing: border-box;
+      transition: 0.1s;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 10;
+  transition: transform 1s;
+    }
 
-#cursor{
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 2px solid rgb(0, 117, 144);
-    box-sizing: border-box;
-    transition: 0.1s;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 10;
-transition: transform 1s;
+    .ring{
+      animation-name: ring;
+      animation-duration: 0.7s;
+      animation-fill-mode: both;
+  transition: transform 1s;
+    }
+  @keyframes ring {
+    0%{}
+    100%{padding: 0.3em; background-color: #222728; transform: rotateZ(90deg);    box-shadow: 0 0 0 8px #222728;
+  
+    }
   }
-  .ring{
-    animation-name: ring;
+  .ring-disabled{
+    animation-name: ring-disabled;
     animation-duration: 0.7s;
     animation-fill-mode: both;
-transition: transform 1s;
+  transition: transform 1s;
   }
-@keyframes ring {
-  0%{}
-  100%{padding: 0.3em; background-color: rgb(0, 70, 81); transform: rotateZ(90deg);    box-shadow: 0 0 0 8px rgb(0, 57, 66);
-
+  @keyframes ring-disabled {
+    0%{padding: 0.3em; background-color: rgb(0, 70, 81); transform: rotateZ(90deg);    box-shadow: 0 0 0 8px rgb(0, 57, 66)}
+    100%{}
   }
-}
-.ring-disabled{
-  animation-name: ring-disabled;
-  animation-duration: 0.7s;
-  animation-fill-mode: both;
-transition: transform 1s;
-}
-@keyframes ring-disabled {
-  0%{padding: 0.3em; background-color: rgb(0, 70, 81); transform: rotateZ(90deg);    box-shadow: 0 0 0 8px rgb(0, 57, 66)}
-  100%{}
 }
   /* CURSOR */

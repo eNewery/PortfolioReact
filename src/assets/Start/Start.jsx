@@ -25,15 +25,21 @@ setTimeout(() => {
         <h3>Hi, welcome to</h3>
         <div className="start-image"></div>
         <h3>my portfolio</h3>
-        <button className='start-btn' id='next' onMouseOut={() => {
-                    let cursor = document.querySelector("#cursor")
-                    cursor.classList.remove("ring")
-                    cursor.classList.add("ring-disabled")
-        }} onMouseMove={() => {
-          let cursor = document.querySelector("#cursor")
-          cursor.classList.remove("ring-disabled")
-          cursor.classList.add("ring")
-        }}>See More</button>
+        <button onMouseOut={() => {
+            let cursor = document.querySelector("#cursor")
+            cursor.classList.remove("ring")
+            cursor.classList.add("ring-disabled")
+}} onMouseMove={() => {
+  let cursor = document.querySelector("#cursor")
+  cursor.classList.remove("ring-disabled")
+  cursor.classList.add("ring")
+}} id="next" class="btn-neon">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <span id="span4"></span>
+        See More
+    </button>
         <div className='rrss'>
           <a target="_blank" href="https://www.linkedin.com/in/ulises-rodriguez-5b512a230/">
           <div className="linkedin"></div>
